@@ -42,3 +42,7 @@
   font-weight: bolder;
   font-size: 10rem;
 }
+#mainContainer
+{
+    margin: 2rem;
+}

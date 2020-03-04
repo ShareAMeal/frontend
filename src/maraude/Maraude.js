@@ -20,8 +20,7 @@ class MaraudeComponent extends React.Component {
         let eventsList = [];
         let eventComponents = [];
         this.state.events.forEach((ev)=>{
-            eventsList.push(<li>{ev.name}</li>)
-            eventComponents.push(<EventComponent event={ev}/>)
+            eventComponents.push(<EventComponent event={ev} key={Math.random()} />)
 
         });
         return (<div id="maraude">
@@ -42,9 +41,6 @@ class MaraudeComponent extends React.Component {
                     <p>Heure</p>
                 </div>
             </div>
-            <ul>
-                {eventsList}
-            </ul>
         </div>)
     }
 }
