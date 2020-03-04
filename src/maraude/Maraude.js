@@ -1,6 +1,6 @@
 import React from 'react';
 import './Maraude.css'
-import listEvents from "../data/restapi";
+import { listEvents } from "../data/restapi";
 import EventComponent from "./EventComponent";
 
 class MaraudeComponent extends React.Component {
@@ -10,8 +10,8 @@ class MaraudeComponent extends React.Component {
     }
 
     componentDidMount() {
-        listEvents.then((x) => {
-            console.log(x);
+        listEvents().then((x) => {
+            console.log("list events",x);
             this.setState({events: x.data});
         });
     }
