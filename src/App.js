@@ -6,7 +6,15 @@ import MyAsso from './asso/MyAsso';
 import LoginComponent from './login/Login'
 import DateTimeComponent from './utils/DateTime.js'
 import AutoComponent from './data/autocomponent';
-
+import { BrowserRouter, Link, Route } from "react-router-dom";
+class A extends React.Component { render() { return (<div>
+    AAA
+      		<Link to='/b'>B</Link>
+</div>) } }
+class B extends React.Component { render() { return (<div>
+    BbB
+      		<Link to='/a'>A</Link>
+</div>) } }
 class App extends React.Component {
     constructor(props)
     {
@@ -36,6 +44,13 @@ class App extends React.Component {
 	      <i className="descendez">V</i>
 	      <p>Ce site présente les maraudes organisées près de chez vous.</p>
 	  </header>
+      <BrowserRouter>
+      	<div>
+      		<Route path="/a" component={A} />
+      		<Route path="/b" component={B} />
+      		<Link to='/a'>A</Link>
+      	</div>
+      </BrowserRouter>
       <div id="mainContainer">
       {ifAssoManager}
       	<Home/>
