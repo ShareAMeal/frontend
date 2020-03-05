@@ -9,6 +9,8 @@ function DRFHTMLfieldName(type)
 	    return 'email'
 	case 'integer':
 	    return 'number'
+	case 'boolean':
+	    return 'checkbox'
 	default:
 	    return type
     }
@@ -19,14 +21,14 @@ class AutoComponent extends React.Component
     {
 	super(props); //props.options_url, props.object_url, props.data, fonction onSuccess(response.data)
 	this.state={errors:''}
-	console.log('url options',props.options_url);
+//	console.log('url options',props.options_url);
     }
     componentDidMount()
     {
-	console.log(this.props);
+//	console.log(this.props);
 	options(this.props.options_url)
 	.then((res)=>{
-	    console.log(res.data)
+//	    console.log(res.data)
 	    let newState={ready:true, name:res.data.name, description:res.data.description, fields:[], data:{}}
 	    for (let field in res.data.actions.POST) //ici, field est un string
 	    {
@@ -41,14 +43,14 @@ class AutoComponent extends React.Component
 			newState.data[field]=this.props.data[field]
 		    }
 	    }
-	console.log("ns",newState);
+//	console.log("ns",newState);
 	    this.setState(newState);
 	});
     }
 
     submit()
     {
-//	console.log(this.state.data);
+	console.log(this.state.data);
 	if(this.props.object_url)
 	    this.update()
 	else
@@ -61,6 +63,8 @@ class AutoComponent extends React.Component
 	.then( (res) => {
 //	    console.log(res);
 	    this.setState({data:res.data})
+	    if(this.props.onSuccess)
+		this.props.onSuccess(res.data);
 	})
 	.catch( (err) => {
 	    console.log(err);
@@ -73,6 +77,8 @@ class AutoComponent extends React.Component
 	post(this.props.options_url, this.state.data)
 	.then( (res) => {
 	    console.log(res);
+	    if(this.props.onSuccess)
+		this.props.onSuccess(res.data);
 	})
 	.catch( (err) => {
 	    console.log(err);
@@ -89,6 +95,7 @@ class AutoComponent extends React.Component
 	    this.state.fields.forEach( (f) => {
 		if (!f.read_only)
 		{
+		    if(f.type != 'boolean'){
 		    fields.push(
 			<div>
 			    <label htmlFor={f.name}>{f.label}</label> &nbsp;
@@ -98,9 +105,21 @@ class AutoComponent extends React.Component
 					onChange={ (ev) => {
 					    this.state.data[f.name]=ev.target.value;
 					    this.setState(this.state);
-					} }/>
+					} } />
 			</div>
-		    )
+		    )}
+		    else {
+			fields.push(<div>   <label htmlFor={f.name}>{f.label}</label> &nbsp;
+				<input type={DRFHTMLfieldName(f.type)}
+				       name={f.name} id={f.name}
+					onChange={ (ev) => {
+					    this.state.data[f.name]=ev.target.checked; //yes vraiment trop content les cas spéciaux
+					    this.setState(this.state);
+					} } 
+			    		checked={this.state.data[f.name]}/>
+
+			    </div>);
+		    }
 		}
 	    });
 	}

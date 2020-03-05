@@ -5,7 +5,7 @@ function authH()
 {
     return {Authorization: 'Basic '+localStorage.getItem('auth_token')}
 }
-export let listEvents = ()=>{return axios.get(baseUrl+'/event/');}
+export let listEvents = (opt)=>{return axios.get(baseUrl+'/event/',opt);}
 export let listAssos = (opt)=>{return axios.get(baseUrl+'/asso/',opt);}
 export let getMyAsso = ()=>{return axios.get(baseUrl+'/asso/mine/', {headers:authH()});}
 export let createEvent = (data)=>{return axios.post(baseUrl+'/event/', data, {headers:authH()}); }
