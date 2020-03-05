@@ -5,6 +5,7 @@ import Home from './home/Home'
 import MyAsso from './asso/MyAsso';
 import LoginComponent from './login/Login'
 import DateTimeComponent from './utils/DateTime.js'
+import AutoComponent from './data/autocomponent';
 
 class App extends React.Component {
     constructor(props)
@@ -15,7 +16,7 @@ class App extends React.Component {
     onLoginSuccess(my_asso)
     {
 	this.setState({my_asso: my_asso});
-	console.log(this.state['my_asso']);
+//	console.log(this.state['my_asso']);
     }
     render()
     {
@@ -28,14 +29,13 @@ class App extends React.Component {
 	}
   return (
     <div className="App">
-      <LoginComponent onLoginSuccess={ (x)=>{this.onLoginSuccess(x);} }/>
-      <DateTimeComponent onChange={ (datetime)=>{console.log(datetime.toISOString())} }/>
-      <header className="App-header">
-        <p>Share a Meal</p>
-          <br/>
-          <i className="descendez">V</i>
-          <p>Ce site présente les maraudes organisées près de chez vous.</p>
-      </header>
+	  <LoginComponent onLoginSuccess={ (x)=>{this.onLoginSuccess(x);} }/>
+	  <header className="App-header">
+	    <p>Share a Meal</p>
+	      <br/>
+	      <i className="descendez">V</i>
+	      <p>Ce site présente les maraudes organisées près de chez vous.</p>
+	  </header>
       <div id="mainContainer">
       {ifAssoManager}
       	<Home/>

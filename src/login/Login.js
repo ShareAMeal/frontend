@@ -37,9 +37,10 @@ class LoginComponent extends React.Component
 
     validateLogin()
     {
+	if(localStorage.getItem('auth_token') === null){
 	    let auth_token =  window.btoa(this.state.username +':' + this.state.password); // norme HTTP Basic Auth
 	    localStorage.setItem('auth_token', auth_token); //pour qu'il soit dispo dans toute la fenetre du navigateur
-
+	}
 	    getMyAsso()
 	    .then((x)=>{
 		this.setState({visible:true});

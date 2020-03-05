@@ -5,7 +5,7 @@ class EventComponent extends React.Component {
         return (<div className="rowitem">
             <p>{this.props.event.name}</p>
             <p>{this.props.event.description}</p>
-            <p>{this.props.event.start_datetime}</p>
+            <p>le {new Date(this.props.event.start_datetime).toLocaleString()}</p>
         </div>)
     }
 }

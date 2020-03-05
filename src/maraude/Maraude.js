@@ -30,17 +30,6 @@ class MaraudeComponent extends React.Component {
             <div className="mainrow">
                 {eventComponents}
             </div>
-            <div className="mainrow">
-                <div className="rowitem">
-                    <p>Nom association</p>
-                </div>
-                <div className="rowitem">
-                    <p>Lieu</p>
-                </div>
-                <div className="rowitem">
-                    <p>Heure</p>
-                </div>
-            </div>
         </div>)
     }
 }
