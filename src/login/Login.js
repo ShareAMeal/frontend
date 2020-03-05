@@ -21,53 +21,53 @@ class LoginComponent extends React.Component
     {
 	if(localStorage.getItem('auth_token') != null)
 	{
-	    this.validateLogin(()=>{
-		this.setState({connState:'loginSuccess'});
-	    },this.logOut);
+	    this.validateLogin();
 	}
+	else
+	{
+	    this.setState({visible: true});
+	}
+	console.log(this.state.connState);
     }
 
     showForm(){
-	console.log("showForm");
+//	console.log("showForm");
 	this.setState({connState: 'formShown'});
     }
 
-    validateLogin(success, failure)
+    validateLogin()
     {
-	try
-	{
-	    getMyAsso().then((x)=>{
+	    let auth_token =  window.btoa(this.state.username +':' + this.state.password); // norme HTTP Basic Auth
+	    localStorage.setItem('auth_token', auth_token); //pour qu'il soit dispo dans toute la fenetre du navigateur
+
+	    getMyAsso()
+	    .then((x)=>{
 		this.setState({visible:true});
-		console.log(x.data);
+		console.log('response',x);
 		if (x.data.id !== null)
 		{
 		    this.setState({my_asso:x.data});
-		    console.log('login tested successfully');
-		    success();
+		    console.log('Connexion réussie');
+		    this.props.onLoginSuccess(x.data);
+		    this.setState({connState: 'loginSuccess'});
 		} else  { 
 		    console.log('bizarre');
-		    failure();
+		    this.logOut();
 		}
+	    })
+	    .catch((err) => {
+		this.setState({visible:true});
+		this.setState({errors: 'Identifiants invalides'});
+		console.log('Précédentes informations de connexion obsolètes',err);
+	    	this.logOut();
+	    },(err2)=>{
+		console.log(err2)
 	    });
-	} catch (err)
-	{
-	    failure();
-	}
     }
     doLogin(e)
     {
-	if (e.key==='Enter' || e===null){
-	    let auth_token =  window.btoa(this.state.username +':' + this.state.password);
-	    console.log(auth_token);
-	    localStorage.setItem('auth_token', auth_token);
-	    this.validateLogin(()=>
-	    {
-		this.props.onLoginSuccess(auth_token);
-	    	this.setState({connState: 'loginSuccess'});
-	    },()=>
-	    {
-		this.logOut()
-	    });
+	if (e.key === 'Enter' ||  e=== null){
+	    this.validateLogin();
 	}
     }
     logOut()
@@ -95,6 +95,7 @@ class LoginComponent extends React.Component
 		<p>
 			Connecté pour l'association {this.state.my_asso.name}&nbsp;&nbsp;&nbsp; 
 			<button onClick={ ()=>{this.logOut()}}>Se déconnecter</button>
+	    <button onClick={ ()=>{this.setState({visible:false});} }> Fermer </button>
 		</p>
 		</div>
 	}
@@ -110,7 +111,7 @@ class LoginComponent extends React.Component
 	    			value={this.state.password}
 	    			onChange={ (e)=>{this.onPasswordChange(e);} }
 				onKeyPress={this.doLogin} />
-			<button onClick={this.doLogin}>Se connecter</button>
+			<button onClick={()=>{this.validateLogin()}}>Se connecter</button>
 		    </div>
 	}
 	if(this.state.connState === 'formHidden')
@@ -125,7 +126,6 @@ class LoginComponent extends React.Component
 	{}
 	return (<div className='logincomponent' hidden={!this.state.visible}>
 	    {inside}
-	    <button onClick={ ()=>{this.setState({visible:false});} }> Fermer </button>
 	</div>)
     }
 }

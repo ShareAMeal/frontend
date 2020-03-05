@@ -11,7 +11,7 @@ class MaraudeComponent extends React.Component {
 
     componentDidMount() {
         listEvents().then((x) => {
-            console.log("list events",x);
+            //console.log("list events",x);
             this.setState({events: x.data});
         });
     }
