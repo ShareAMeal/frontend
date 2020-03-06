@@ -15,7 +15,7 @@
 .App-header {
   background-color: #282c34;
   display: flex;
-    min-height: 100vh;
+  min-height: 100vh;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -36,16 +36,13 @@
   }
 }
 
-.descendez
-{
+.descendez {
   font-weight: bolder;
   font-size: 10rem;
 }
-#mainContainer
-{
-    margin: 2rem;
+#mainContainer {
+  margin: 2rem;
 }
-.flex
-{
-    display: flex;
+.flex {
+  display: flex;
 }

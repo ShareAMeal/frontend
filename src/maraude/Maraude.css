@@ -1,16 +1,16 @@
 #maraude {
-    border: 1px solid green;
+  border: 1px solid green;
 }
 .mainrow {
-    padding: 1rem;
-    margin: 1rem;
-    display: flex;
-    flex-direction: row;
-    border: 1px solid blue;
+  padding: 1rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid blue;
 }
 
 .rowitem {
-    border: 1px solid red;
-    padding: 1rem;
-    margin-right: 1rem;
+  border: 1px solid red;
+  padding: 1rem;
+  margin-right: 1rem;
 }

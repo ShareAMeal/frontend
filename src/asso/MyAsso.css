@@ -1,16 +1,13 @@
-#container
-{
-    border: 1px solid antiquewhite;
+#container {
+  border: 1px solid antiquewhite;
 }
-.action
-{
-    display: flex;
-    flex-direction: row;
-    text-align: start;
+.action {
+  display: flex;
+  flex-direction: row;
+  text-align: start;
 }
-.item
-{
-    border: 1px solid aliceblue;
-    margin: 1rem;
-    padding: 0.5rem;
+.item {
+  border: 1px solid aliceblue;
+  margin: 1rem;
+  padding: 0.5rem;
 }
