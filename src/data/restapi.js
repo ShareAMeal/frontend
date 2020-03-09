@@ -1,6 +1,6 @@
 const axios = require("axios");
-//var baseUrl = 'http://shareameal.ribes.ovh/api';
-export var baseUrl = "http://127.0.0.1:8000/api";
+export var baseUrl = 'http://shareameal.ribes.ovh/api';
+//export var baseUrl = "http://127.0.0.1:8000/api";
 function authH() {
   return { Authorization: "Basic " + localStorage.getItem("auth_token") };
 }
