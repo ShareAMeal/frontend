@@ -9,4 +9,4 @@ RUN npm install
 RUN node ./node_modules/react-scripts/bin/react-scripts.js build
 FROM nginx:alpine
 COPY --from=build /app/build/* /usr/share/nginx/html/
-COPY --from=build /app/build/* /usr/share/nginx/html/static
+COPY --from=build /app/build/* /usr/share/nginx/html/static/
