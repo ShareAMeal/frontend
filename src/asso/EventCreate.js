@@ -43,7 +43,7 @@ class EventCreate extends React.Component {
       <div>
         {this.state.errors}
         <div>
-          <label htmlFor="name">Nom: </label>
+          <label htmlFor="name">Nom: <br/></label>
           <input
             id="name"
             value={this.state.name}
@@ -65,7 +65,7 @@ class EventCreate extends React.Component {
           />
           <br />
           <br />
-          <label htmlFor="startdate">Date de début: </label>
+          <label htmlFor="startdate"></label>
           <DateTimeComponent
             onChange={dt => {
               this.setState({ start_datetime: dt.toISOString() });

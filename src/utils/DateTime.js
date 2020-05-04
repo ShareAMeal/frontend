@@ -31,7 +31,7 @@ class DateTimeComponent extends React.Component {
   render() {
     return (
       <div>
-        le {this.state.datetime}
+        Date de début le : {this.state.datetime}
         <br />
         <input
           value={this.state.date}

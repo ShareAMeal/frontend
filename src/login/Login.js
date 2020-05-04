@@ -100,7 +100,7 @@ class LoginComponent extends React.Component {
     let inside = "";
     if (this.state.connState === "loginSuccess") {
       inside = (
-        <div>
+        <div class ="connected">
           <p>
             Connecté pour l'association {this.state.my_asso.name}&nbsp;&nbsp;&nbsp;
             <button
@@ -122,11 +122,12 @@ class LoginComponent extends React.Component {
         </div>
       );
     }
+
     if (this.state.connState === "formShown") {
       inside = (
         <div>
-          {this.state.errors}
-          <label htmlFor="loginI">Nom d'utilisateur</label>
+            <h4 class = "erreurs">{this.state.errors} </h4>
+          <label htmlFor="loginI" class="pseudo"> Nom d'utilisateur :</label>
           <input
             type="login"
             name="username"
@@ -135,8 +136,8 @@ class LoginComponent extends React.Component {
             onChange={e => {
               this.onUsernameChange(e);
             }}
-          />
-          <label htmlFor="passI">Mot de passe</label>
+          /><br/>
+          <label htmlFor="passI" class="mdp"> Mot de passe :</label>
           <input
             type="password"
             name="password"
@@ -147,6 +148,7 @@ class LoginComponent extends React.Component {
             }}
             onKeyPress={this.doLogin}
           />
+            <br/>
           <button
             onClick={() => {
               this.validateLogin();

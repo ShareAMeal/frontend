@@ -1,3 +1,22 @@
 .logincomponent {
-  border: 1px solid teal;
+  background-color: #282c34;
+  text-align: left;
+  color : white;
+}
+
+button{
+  background-color: #282c34;
+  color : white;
+  margin : 1rem;
+
+
+}
+.mdp{
+  margin :1rem;
+
+
+}
+
+.erreurs{
+  color : red;
 }
