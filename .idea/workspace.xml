@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="350937b4-ebdd-437f-8a9e-66506dd7c7a0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/nginx.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PageAsso/page_asso.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/PageAsso/page_asso.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login/Login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/login/Login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/login/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +47,18 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$USER_HOME$/NodeTuto" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
