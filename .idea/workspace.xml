@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="350937b4-ebdd-437f-8a9e-66506dd7c7a0" name="Default Changelist" comment="Amélioration du login react">
-      <change afterPath="$PROJECT_DIR$/src/Main.js" afterDir="false" />
+    <list default="true" id="350937b4-ebdd-437f-8a9e-66506dd7c7a0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/home/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/home/Home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/home/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PageAsso/page_asso.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/PageAsso/page_asso.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/login/Login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/login/Login.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/login/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/maraude/EventComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/maraude/EventComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/maraude/Maraude.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/maraude/Maraude.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/maraude/Maraude.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/maraude/Maraude.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +76,8 @@
       <workItem from="1588597450106" duration="12335000" />
       <workItem from="1588611510092" duration="784000" />
       <workItem from="1588754882873" duration="125000" />
-      <workItem from="1588766399852" duration="750000" />
+      <workItem from="1588766399852" duration="1881000" />
+      <workItem from="1588768515808" duration="1762000" />
     </task>
     <task id="LOCAL-00001" summary="Amélioration du login react">
       <created>1588595097863</created>
@@ -92,7 +86,28 @@
       <option name="project" value="LOCAL" />
       <updated>1588595097864</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="création deuxième page">
+      <created>1588767196695</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1588767196695</updated>
+    </task>
+    <task id="LOCAL-00003" summary="création deuxième page">
+      <created>1588767448787</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1588767448787</updated>
+    </task>
+    <task id="LOCAL-00004" summary="création deuxième page">
+      <created>1588768530509</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1588768530509</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -113,7 +128,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Amélioration du login react" />
-    <option name="LAST_COMMIT_MESSAGE" value="Amélioration du login react" />
+    <MESSAGE value="création deuxième page" />
+    <option name="LAST_COMMIT_MESSAGE" value="création deuxième page" />
   </component>
   <component name="WindowStateProjectService">
     <state x="385" y="238" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585907545898">
@@ -124,10 +140,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="729" y="390" width="518" height="325" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1585907591959" />
-    <state x="489" y="156" width="866" height="847" key="CommitChangelistDialog2" timestamp="1588595174971">
+    <state x="489" y="156" width="866" height="847" key="CommitChangelistDialog2" timestamp="1588768530125">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="489" y="156" width="866" height="847" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1588595174971" />
+    <state x="489" y="156" width="866" height="847" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1588768530125" />
     <state x="176" y="144" width="1482" height="872" key="DiffContextDialog" timestamp="1588595185740">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -152,10 +168,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="1377" height="260" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1585897904926" />
-    <state x="586" y="290" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1588610714211">
+    <state x="597" y="183" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1588770436291">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="586" y="290" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1588610714211" />
+    <state x="597" y="183" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1588770436291" />
     <state x="657" y="245" width="662" height="615" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1588184870573">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -168,9 +184,20 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="591" y="267" key="run.anything.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1585907552047" />
-    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1585906791410">
+    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1588768915833">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1585906791410" />
+    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1588768915833" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/PageAsso/page_asso.js</url>
+          <line>21</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

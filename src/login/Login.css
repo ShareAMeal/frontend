@@ -1,8 +1,8 @@
 .logincomponent {
   background-color: white;
-  text-align: left;
+  text-align: center;
   color : black;
-  background-color: white;
+  padding-top: 0.5rem;
 }
 
 button{
@@ -12,10 +12,8 @@ button{
 
 }
 .mdp{
-  padding-top: 0;
-  background-color: white;
   margin :1rem;
-  color: black
+  color: black;
 
 
 }
@@ -27,4 +25,7 @@ button{
   background-color: white;
   color: black;
   background-color: white;
+}
+.Logout{
+  color:black;
 }

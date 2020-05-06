@@ -1,5 +1,6 @@
 import React from "react";
 import "./Login.css";
+import {Switch, Route, BrowserRouter, Redirect} from 'react-router-dom';
 //import MyAsso from '../asso/MyAsso';
 import { getMyAsso } from "../data/restapi";
 class LoginComponent extends React.Component {
@@ -103,17 +104,20 @@ class LoginComponent extends React.Component {
         <div name ="connected">
           <p name = "test">
             Connecté pour l'association {this.state.my_asso.name}&nbsp;&nbsp;&nbsp;
-            <button
-              onClick={() => {
-                this.logOut();
-              }}
-            >
-              Se déconnecter
-            </button>
-            <button
+              <a className="Logout "
+                 href="/"
+                 onClick={() => {
+                     this.logOut();
+                 }
+                 }>
+                  Se déconnecter
+              </a>
+                      <button
               onClick={() => {
                 this.setState({ visible: false });
-              }}
+
+
+                      }}
             >
               {" "}
               Fermer{" "}
