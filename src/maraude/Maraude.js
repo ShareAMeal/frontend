@@ -23,9 +23,10 @@ class MaraudeComponent extends React.Component {
     });
     return (
       <div id="maraude">
-        <h3>
-          <p>Liste des maraudes :</p>
-        </h3>
+
+          <p class = "Liste">
+            Liste des maraudes :
+          </p>
         <div className="mainrow">{eventComponents}</div>
       </div>
     );

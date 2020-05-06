@@ -1,22 +1,30 @@
 .logincomponent {
-  background-color: #282c34;
+  background-color: white;
   text-align: left;
-  color : white;
+  color : black;
+  background-color: white;
 }
 
 button{
-  background-color: #282c34;
-  color : white;
+  color: black;
   margin : 1rem;
 
 
 }
 .mdp{
+  padding-top: 0;
+  background-color: white;
   margin :1rem;
+  color: black
 
 
 }
 
 .erreurs{
   color : red;
+}
+.connected{
+  background-color: white;
+  color: black;
+  background-color: white;
 }

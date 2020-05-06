@@ -6,15 +6,39 @@
   margin: 1rem;
   display: flex;
   flex-direction: row;
-  border: 1px solid blue;
+
+
 }
 
 .rowitem {
-  border: 1px solid red;
+  margin: 1rem;
+  border: 1.5px solid #282c34;
+  color: #282c34;
   padding: 1rem;
-  margin-right: 1rem;
 }
-h3 {
-  font-size: 150;
-  color :  white;
+.Liste {
+  text-align: left;
+  font-size: calc(7px + 1.5vmin);
+  text-decoration: underline;
+  color: black;
+}
+.Nom{
+  text-decoration: underline;
+  font-size: calc(7px + 1.25vmin);
+  color: black;
+
+
+}
+.Desc{
+  font-size: calc(5px + 1vmin);
+  color: black;
+
+
+
+}
+.Date{
+  font-size: calc(5px + 1vmin);
+  color: black;
+
+
 }

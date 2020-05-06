@@ -100,8 +100,8 @@ class LoginComponent extends React.Component {
     let inside = "";
     if (this.state.connState === "loginSuccess") {
       inside = (
-        <div class ="connected">
-          <p>
+        <div name ="connected">
+          <p name = "test">
             Connecté pour l'association {this.state.my_asso.name}&nbsp;&nbsp;&nbsp;
             <button
               onClick={() => {
